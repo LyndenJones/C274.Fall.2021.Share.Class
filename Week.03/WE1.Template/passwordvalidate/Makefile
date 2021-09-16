@@ -4,7 +4,7 @@ test:
 
 subtest:
 	make tar
-	@echo "**** Currently works on the VM. Problems with MacOS."
+	@echo "**** Currently works on the VM and in CSC 1-21. Problems with MacOS."
 	(cd ..; python3 submission_validator.py)
 
 tar:
