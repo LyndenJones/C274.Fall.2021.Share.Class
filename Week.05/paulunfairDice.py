@@ -19,7 +19,13 @@ def biased_rolls(prob_list, s, n):
         rolls: a list (of length n) containing each of the n rolls of the 
                biased die, in the order they were generated.
     """
+    for i in prob_list:
+        assert type(i) is float, "float"
     
+    assert len(prob_list) >= 2, "probabilites list must be at least 2"
+
+    assert sum(prob_list) == 1.0, "sum to 1"
+
     # replace this line and solve the problem!
     rolls = None
 
@@ -53,5 +59,9 @@ if __name__ == "__main__":
     # when the program is called directly from the terminal
     # using "python3 unfairDice.py". This can be useful for
     # testing your implementations.
+    biased_rolls([1/3, 2/3], 5, 10)	# Pass
+    biased_rolls([1/3, 'a'], 5, 10)	# Fail
+    # biased_rolls([1/3, 1/3], 5, 10)	# Fail
+    # biased_rolls([1/1], 5, 10)		# Fail
     pass
 
