@@ -7,6 +7,9 @@ v11:
 v12:
 	python3 count.the.v12.py data.v1
 
+v13:
+	python3 count.the.v13.py data.v1
+
 dog1:
 	python3 driver.dog.py
 
