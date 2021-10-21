@@ -60,7 +60,7 @@ def open_file(filename=InputFilename):
 
 def safe_input(f=None, prompt=""):
     """
-    Prose summary.
+    Read lines from file object, handling EOF from either file or stdin.
 
     Parameters
     ----------
