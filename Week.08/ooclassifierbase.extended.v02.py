@@ -58,6 +58,29 @@ def open_file(filename=InputFilename):
 
 
 def safe_input(f=None, prompt=""):
+    """
+    Prose summary.
+
+    Parameters
+    ----------
+    param1 : type
+        Prose
+    param2 : type
+        Prose
+
+    Returns
+    -------
+    type
+        Prose
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
     try:
         # Case:  Stdin
         if f is sys.stdin or f is None:
