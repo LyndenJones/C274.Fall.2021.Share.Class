@@ -203,6 +203,23 @@ class C274:
 
 
 class ClassifyByTarget(C274):
+    """
+    Prose summary.
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
     def __init__(self, lw=[]):
         """
         Prose summary.
@@ -542,6 +559,29 @@ class ClassifyByTarget(C274):
         return
 
     def print_run_info(self,printSorted=True):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         print("-------- Print Run Info --------")
         print("All words:%3s. " % self.get_allWords(), end='')
         print(" Target words:%3s" % self.get_theCount())
@@ -553,6 +593,29 @@ class ClassifyByTarget(C274):
         return
 
     def print_confusion_matrix(self, targetLabel, doKey=False, tag=""):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         assert (self.TP + self.TP + self.FP + self.TN) > 0
         print(tag+"-------- Confusion Matrix --------")
         print(tag+"%10s | %13s" % ('Predict', 'Label'))
@@ -567,6 +630,29 @@ class ClassifyByTarget(C274):
         return
 
     def eval_training_set(self, tset, targetLabel, lines=True):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         print("-------- Evaluate Training Set --------")
         self.initTF()
         # zip is good for parallel arrays and iteration
@@ -604,6 +690,29 @@ class ClassifyByTarget(C274):
         return
 
     def classify_by_words(self, ti, update=False, tlabel="last"):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         inClass = False
         evidence = ''
         lw = ti.get_words()
@@ -627,17 +736,103 @@ class ClassifyByTarget(C274):
 
     # Could use a decorator, but not now
     def classify(self, ti, update=False, tlabel="last"):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         cl, e = self.classify_by_words(ti, update, tlabel)
         return(cl, e)
 
     def classify_all(self, ts, update=True, tlabel="classify_all"):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         for ti in ts.get_instances():
             cl, e = self.classify(ti, update=update, tlabel=tlabel)
         return
 
 
 class TrainingInstance(C274):
+    """
+    Prose summary.
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
     def __init__(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         super().__init__() # Call superclass
         # self.type = str(self.__class__)
         self.inst = dict()
@@ -650,12 +845,81 @@ class TrainingInstance(C274):
         return
 
     def get_label(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.inst["label"])
 
     def get_words(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.inst["words"])
 
     def set_class(self, theClass, tlabel="last", explain=""):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         # tlabel = tag label
         self.inst["class"] = theClass
         self.inst["experiments"][tlabel] = theClass
@@ -663,6 +927,29 @@ class TrainingInstance(C274):
         return
 
     def get_class_by_tag(self, tlabel):             # tlabel = tag label
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         cl = self.inst["experiments"].get(tlabel)
         if cl is None:
             return("N/A")
@@ -670,6 +957,29 @@ class TrainingInstance(C274):
             return(cl)
 
     def get_explain(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         cl = self.inst.get("explain")
         if cl is None:
             return("N/A")
@@ -677,9 +987,55 @@ class TrainingInstance(C274):
             return(cl)
 
     def get_class(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return self.inst["class"]
 
     def process_input_line(
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
                 self, line, run=None,
                 tlabel="read", inclLabel=False
             ):
@@ -697,7 +1053,47 @@ class TrainingInstance(C274):
 
 
 class TrainingSet(C274):
+    """
+    Prose summary.
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
     def __init__(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         super().__init__() # Call superclass
         # self.type = str(self.__class__)
         self.inObjList = []     # Unparsed lines, from training set
@@ -706,28 +1102,166 @@ class TrainingSet(C274):
         return
 
     def set_env_variable(self, k, v):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.variable[k] = v
         return
 
     def get_env_variable(self, k):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         if k in self.variable:
             return(self.variable[k])
         else:
             return ""
 
     def inspect_comment(self, line):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         if len(line) > 1 and line[1] != ' ':      # Might be variable
             v = line.split(maxsplit=1)
             self.set_env_variable(v[0][1:], v[1])
         return
 
     def get_instances(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.inObjHash)      # FIXME Should protect this more
 
     def get_lines(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.inObjList)      # FIXME Should protect this more
 
     def print_training_set(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         print("-------- Print Training Set --------")
         z = zip(self.inObjHash, self.inObjList)
         for ti, w in z:
@@ -740,6 +1274,29 @@ class TrainingSet(C274):
         return
 
     def process_input_stream(self, inFile, run=None):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         assert not (inFile is None), "Assume valid file object"
         cFlag = True
         while cFlag:
@@ -767,6 +1324,29 @@ class TrainingSet(C274):
 
 # Very basic test of functionality
 def basemain():
+    """
+    Prose summary.
+
+    Parameters
+    ----------
+    param1 : type
+        Prose
+    param2 : type
+        Prose
+
+    Returns
+    -------
+    type
+        Prose
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
     global Debug
     tset = TrainingSet()
     run1 = ClassifyByTarget(TargetWords)
