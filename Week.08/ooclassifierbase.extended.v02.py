@@ -122,19 +122,111 @@ class C274:
     """
 
     def __init__(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.type = str(self.__class__)
         return
 
     def __str__(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.type)
 
     def __repr__(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         s = "<%d> %s" % (id(self), self.type)
         return(s)
 
 
 class ClassifyByTarget(C274):
     def __init__(self, lw=[]):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         super().__init__() # Call superclass
         # self.type = str(self.__class__)
         self.allWords = 0
@@ -145,6 +237,29 @@ class ClassifyByTarget(C274):
         return
 
     def initTF(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.TP = 0
         self.FP = 0
         self.TN = 0
@@ -153,40 +268,270 @@ class ClassifyByTarget(C274):
 
     # FIXME:  Incomplete.  Finish get_TF() and other getters/setters.
     def get_TF(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.TP, self.FP, self.TN, self.FN)
 
     # TODO: Could use Use Python properties
     #     https://www.python-course.eu/python3_properties.php
     def set_target_words(self, lw):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         # Could also do self.targetWords = lw.copy().  Thanks, TA Jason Cannon
         self.targetWords = copy.deepcopy(lw)
         return
 
     def get_target_words(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.targetWords)
 
     def get_allWords(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.allWords)
 
     def incr_allWords(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.allWords += 1
         return
 
     def get_theCount(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.theCount)
 
     def incr_theCount(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.theCount += 1
         return
 
     def get_nonTarget(self):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         return(self.nonTarget)
 
     def add_nonTarget(self, w):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         self.nonTarget.append(w)
         return
 
     def print_config(self,printSorted=True):
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
         print("-------- Print Config --------")
         ln = len(self.get_target_words())
         print("TargetWords (%d): " % ln, end='')
