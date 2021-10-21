@@ -120,7 +120,6 @@ class C274:
     --------
     doctest
     """
-
     def __init__(self):
         """
         Prose summary.
@@ -1013,6 +1012,9 @@ class TrainingInstance(C274):
         return self.inst["class"]
 
     def process_input_line(
+                self, line, run=None,
+                tlabel="read", inclLabel=False
+            ):
         """
         Prose summary.
 
@@ -1036,9 +1038,6 @@ class TrainingInstance(C274):
         --------
         doctest
         """
-                self, line, run=None,
-                tlabel="read", inclLabel=False
-            ):
         for w in line.split():
             if w[0] == "#":
                 self.inst["label"] = w
