@@ -5,6 +5,7 @@ Extended comments and functionality.
 
 Copyright 2020-2021 Paul Lu
 """
+
 # Copyright 2020-2021 Paul Lu
 import sys
 import copy     # for deepcopy()
@@ -121,29 +122,6 @@ class C274:
     """
 
     def __init__(self):
-    """
-    Prose summary.
-
-    Parameters
-    ----------
-    param1 : type
-        Prose
-    param2 : type
-        Prose
-
-    Returns
-    -------
-    type
-        Prose
-
-    See Also
-    --------
-    Prose
-
-    Examples
-    --------
-    doctest
-    """
         self.type = str(self.__class__)
         return
 
