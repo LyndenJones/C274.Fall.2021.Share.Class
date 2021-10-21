@@ -1,4 +1,7 @@
 # https://pandas.pydata.org/docs/development/contributing_docstring.html
+
+# https://github.com/pandas-dev/pandas/blob/master/pandas/core/arrays/boolean.py
+
 def add(num1, num2):
     """
     Add up two integer numbers.
@@ -59,3 +62,48 @@ def example():
     --------
     doctest
     """
+
+class C274:
+    """
+    Prose summary.
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
+
+    def my_method():
+        """
+        Prose summary.
+
+        Parameters
+        ----------
+        param1 : type
+            Prose
+        param2 : type
+            Prose
+
+        Returns
+        -------
+        type
+            Prose
+
+        See Also
+        --------
+        Prose
+
+        Examples
+        --------
+        doctest
+        """
+

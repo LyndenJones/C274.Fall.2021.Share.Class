@@ -79,7 +79,48 @@ def safe_input(f=None, prompt=""):
 
 
 class C274:
+    """
+    Prose summary.
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
+
     def __init__(self):
+    """
+    Prose summary.
+
+    Parameters
+    ----------
+    param1 : type
+        Prose
+    param2 : type
+        Prose
+
+    Returns
+    -------
+    type
+        Prose
+
+    See Also
+    --------
+    Prose
+
+    Examples
+    --------
+    doctest
+    """
         self.type = str(self.__class__)
         return
 
