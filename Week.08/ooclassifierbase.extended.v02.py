@@ -1,7 +1,7 @@
 """
 Object-Oriented Classifier (ooclassifier).  Base for Assignment #1, CMPUT 274.
 
-Extended comments and functionality.
+Bag of words sentiment analysis.  Extended comments and functionality.
 
 Copyright 2020-2021 Paul Lu
 """
@@ -22,27 +22,19 @@ TargetWords = [
 
 def open_file(filename=InputFilename):
     """
-    Open a file or (use) stdin for reading.
+    Return an open file object or stdin for reading.
     Wrapper function for open() to handle common exceptions.
     Failed file open results in stdin used instead.
 
     Parameters
     ----------
-    filename : string
-        Name/path to file.  Default value of global variable InputFilename.
+    filename : string, default=InputFilename a global string literal
+        Name/path to file.
 
     Returns
     -------
     file object
         Either a real file or stdin
-
-    See Also
-    --------
-    n/a
-
-    Examples
-    --------
-    n/a
     """
     try:
         f = open(filename, "r")
@@ -60,27 +52,19 @@ def open_file(filename=InputFilename):
 
 def safe_input(f=None, prompt=""):
     """
-    Read lines from file object, handling EOF from either file or stdin.
+    Return string with line of input, from file object or stdin, handling EOF
 
     Parameters
     ----------
-    param1 : type
-        Prose
-    param2 : type
-        Prose
+    f : file object, default=None which causes stdin to be used
+        File object or None for stdin
+    prompt : string, default=""
+        Optional prompt for input
 
     Returns
     -------
-    type
-        Prose
-
-    See Also
-    --------
-    Prose
-
-    Examples
-    --------
-    doctest
+    tuple(string, boolean flag): string with line of input, flag=False means EOF
+        flag=False means EOF reached, otherwise True and string is line of input
     """
     try:
         # Case:  Stdin
@@ -104,98 +88,57 @@ def safe_input(f=None, prompt=""):
 
 class C274:
     """
-    Prose summary.
+    Superclass for all classifier-related classes.
 
     Attributes
     ----------
+    type : string
+        Modifiable version of __class__
 
     Methods
     -------
-
-    See Also
-    --------
-    Prose
-
-    Examples
-    --------
-    doctest
+    __init__
+        Constructor, sets attribute "type"
+    __str__
+        Returns human-readable identification string
+    __repr__
+        Returns comparable identification string
     """
+
     def __init__(self):
         """
-        Prose summary.
-
-        Parameters
-        ----------
-        param1 : type
-            Prose
-        param2 : type
-            Prose
+        Sets attribute "type"
 
         Returns
         -------
-        type
-            Prose
-
-        See Also
-        --------
-        Prose
-
-        Examples
-        --------
-        doctest
+        None
         """
         self.type = str(self.__class__)
         return
 
     def __str__(self):
         """
-        Prose summary.
-
-        Parameters
-        ----------
-        param1 : type
-            Prose
-        param2 : type
-            Prose
+        Returns human-readable identification string
 
         Returns
         -------
-        type
-            Prose
+        string
+            Returns human-readable identification string, currently "type"
 
-        See Also
-        --------
-        Prose
-
-        Examples
-        --------
-        doctest
+        To do
+        -----
+        Better content than just attribute "type"
         """
         return(self.type)
 
     def __repr__(self):
         """
-        Prose summary.
-
-        Parameters
-        ----------
-        param1 : type
-            Prose
-        param2 : type
-            Prose
+        Returns comparable identification string
 
         Returns
         -------
-        type
-            Prose
-
-        See Also
-        --------
-        Prose
-
-        Examples
-        --------
-        doctest
+        string
+            Returns comparable identification string, with "id" adn "type"
         """
         s = "<%d> %s" % (id(self), self.type)
         return(s)
