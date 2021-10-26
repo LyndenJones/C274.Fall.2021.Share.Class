@@ -53,7 +53,10 @@ def main():
     leafC = TreeLeaf('C')
     leafD = TreeLeaf('D')
 
-    branch = TreeBranch(leafA, leafB)
+    b1 = TreeBranch(leafB, leafC)
+    b2 = TreeBranch(b1, leafD)
+    b3 = TreeBranch(leafA, b2)
+    mytree = b3
 
     print(make_encoding_table(mytree))
     return
