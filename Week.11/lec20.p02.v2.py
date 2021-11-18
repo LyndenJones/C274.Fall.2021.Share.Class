@@ -6,8 +6,8 @@ import json
 # import pickle
 
 d = dict()
-d[ "cat" ] = 2
-d[ "dog" ] = 7
+d[ "0" ] = "a"
+d[ "01" ] = "b"
 
 print("Dump:", d)
 with open("cd.json", "w") as fout:
@@ -16,3 +16,8 @@ with open("cd.json", "w") as fout:
 with open("cd.json", "r") as fin:
     e = json.load(fin)
 print("Load:", e)
+
+encrypted = "0 01 01 0"
+for f in encrypted.split():
+    print(e[f],end='')
+print()
