@@ -13,8 +13,8 @@ server:
 
 decomp:
 	python3 decompress.py $(FILE).huf.answer
-	cmp $(FILE) $(FILE).answer
-	cksum $(FILE) $(FILE).answer
+	cmp $(FILE) $(FILE).huf.answer.decomp
+	cksum $(FILE) $(FILE).huf.answer.decomp
 
 single:
 	python3 compress.py $(FILE)
